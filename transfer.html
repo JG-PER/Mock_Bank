@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--THIS WEBSITE WAS CREATED BY JAMES GENGERKE; EXCLUDING OTHER SOURCES THAT ARE NOTED-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transfers</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type = "text/javascript" src="script.js"></script>
+  <script>
+    //Prevent Access if Username is Null
+    if (localStorage.getItem('storeUsername') === "null") {
+    window.location.href = "login.html";
+    logout();
+    } else {
+    void 0; 
+    }
+  </script>
+</head>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<body>
+<!--Nav Bar-->
+<div class="topnav">
+  <img id="mainText" src="short_text.png" alt="AVARICE" width="200px">
+  <a href="index.html">Accounts</a>
+  <a href="transfer.html">Transfer In</a>
+  <a href="investments.html">Investments</a>
+  <a href="stocks.html">Markets</a>
+  <a href="newsletter.html">News</a>
+  <a href="login.html" style="float: right;" onclick="logout()">Logout</a>
+</div>  
+
+<h1 class="headerText">
+Let's transfer your money
+</h1>
+
+<!--From: https://www.creativefabrica.com/wp-content/uploads/2020/04/07/Employee-Transfer-Graphics-3817863-1.jpg-->
+<img class="fillerImg" style="margin-top: 100px;" src="https://www.creativefabrica.com/wp-content/uploads/2020/04/07/Employee-Transfer-Graphics-3817863-1.jpg" alt="transfer">
+
+<!--Drop down menus to select where money is coming from to be added to the account-->
+<div id="transferContents">
+  <h2>
+    Which account do you want to move money from?
+  </h2>  
+  <form>
+  <p class="transferSelect">from </p>
+  <select id="from" class="transferSelect">
+    <option value="none" selected="selected">Select One</option>
+    <option value="god">God</option>
+  </select>
+
+  <p class="transferSelect">to </p>
+  <select id="to" class="transferSelect">
+    <option value="none" selected="selected">Select One</option>
+    <option value="mainAcct">Account Number: 
+      <script> document.write(localStorage.getItem("acctNum"));</script>  
+    </option>
+  </select>
+
+<!--This does the "Transfer"-->
+<br>
+  <button onclick="mainTransfer()" id="startTransfer">
+    Start Transfer
+  </button>
+</form>
+</div>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+</body>
+</html>
+  
+
+
+

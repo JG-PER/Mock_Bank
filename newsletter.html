@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--THIS WEBSITE WAS CREATED BY JAMES GENGERKE; EXCLUDING OTHER SOURCES THAT ARE NOTED-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type = "text/javascript" src="script.js"></script>
+  <script>
+    //Prevent Access if Username is Null
+    if (localStorage.getItem('storeUsername') === "null") {
+    window.location.href = "login.html";
+    logout();
+    } else {
+    void 0; 
+    }
+  </script>
+</head>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<body>
+<!--Nav Bar-->
+<div class="topnav">
+  <img id="mainText" src="short_text.png" alt="AVARICE" width="200px">
+  <a href="index.html">Accounts</a>
+  <a href="transfer.html">Transfer In</a>
+  <a href="investments.html">Investments</a>
+  <a href="stocks.html">Markets</a>
+  <a href="newsletter.html">News</a>
+  <a href="login.html" style="float: right;" onclick="logout()">Logout</a>
+</div>   
+    
+<h1 class="headerText">News</h1>
+
+<p>If you have an adblocker, you may need to disable it and reload this page.</p>
+
+<!--A table showing a signup form that is emailed to a fake email and a animated graphic -->
+<table id="newsletterDisplay">
+<tr id="trackedTr">
+    <td>
+        <div class="center">
+    <h2>Sign up for our newsletter!</h2>
+    <form action="mailto:noone@blackhole.com" method="post" name="emailForm" id="letterForm">
+        <p>Name</p>
+        <input type="text" name="fName" id="fName" placeholder="First"> <!--Change value tag to set default value--> 
+        <input type="text" name="lName" id="lName" placeholder="Last">
+      
+        <p>Email</p>
+        <input type="text" name="email" id="email" placeholder="john.doe@example.com" style="width: 555px;">
+        
+        <p>I agree to the Terms and Conditions. </p>
+        <input type="checkbox" id="tosNews" style="visibility: shown;">
+        
+        <input type="reset" class="submitButton" value="Reset" style="float: left;">
+        <input type="submit" class="submitButton" value="Sign Up" style="float: right;">
+    </form>
+
+        </div>
+    </td>
+
+    <td id="trackedTd">
+        <img src="https://img.money.com/2022/05/News-Plunging-Stocks-401k.jpg" id="imgFadeInOut1" class="imgFadeInOut">
+        <img src="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?cs=srgb&dl=pexels-pixabay-534216.jpg&fm=jpg" id="imgFadeInOut2" class="imgFadeInOut">
+        <img src="https://images.wsj.net/im-858672?width=620" id="imgFadeInOut3" class="imgFadeInOut">
+        <img src="https://www.fidelity.co.uk/media/filer_public_thumbnails/PI%20UK/images/sharecast/stocks-hero.jpg__1200x535_q85_subsampling-2.jpg" id="imgFadeInOut4" class="imgFadeInOut">
+    
+    <script>
+        var loaded = true; //complete or not
+        var animationDone = false; //finished a cycle or not
+
+        function animate() {
+          var imgFade1 = document.getElementById("imgFadeInOut1");
+          var imgFade2 = document.getElementById("imgFadeInOut2");
+          var imgFade3 = document.getElementById("imgFadeInOut3");
+          var imgFade4 = document.getElementById("imgFadeInOut4");
+
+          imgFade1.classList.toggle('fade');
+          setTimeout(function() {
+            imgFade1.classList.toggle('fadeOut');
+            imgFade2.classList.toggle('fade');
+            setTimeout(function() {
+              imgFade2.classList.toggle('fadeOut');
+              imgFade3.classList.toggle('fade');
+              setTimeout(function() {
+                imgFade3.classList.toggle('fadeOut');
+                imgFade4.classList.toggle('fade');
+                setTimeout(function() {
+                  imgFade4.classList.toggle('fadeOut');
+                  imgFade1.classList.toggle('fade');
+                    setTimeout(function() {
+                        animate();
+                    }, 1)
+                }, 2000);
+              }, 2000);
+            }, 2000);
+          }, 2000);
+        }
+        //This was going to be a do while loop but it did not work. 
+        //I did not want to scrap it. 
+        animate();
+    </script>
+    </td>
+</tr>
+</table>
+
+<!--News Widget from TradingView along with credit-->
+<div id="newsWidget">
+    <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+      {
+      "feedMode": "all_symbols",
+      "isTransparent": true,
+      "displayMode": "regular",
+      "width": "100%",
+      "height": "100%",
+      "colorTheme": "light",
+      "locale": "en"
+    }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </div>
+  <br><hr>
+  <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+      <p style="font-size: 15px; background-color: lightblue;"><b>All prices and data here are sourced from TradingView.</b></p>
+      </a>
+</body>

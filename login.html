@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--THIS WEBSITE WAS CREATED BY JAMES GENGERKE; EXCLUDING OTHER SOURCES THAT ARE NOTED-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login or Sign Up</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type = "text/javascript" src="script.js"></script>
+</head>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<body onload="logout()">
+<!--Nav Bar-->
+<div class="topnav">
+  <img id="mainText" src="short_text.png" alt="AVARICE" width="200px">
+</div>  
+
+<!--Logo and Details-->
+<div class="center" id="loginText"><h1>
+Login or Sign Up 
+</h1></div>
+
+<div id="completeLogo" class="center">
+  <img src="logo.png" alt="Logo" width="200px">
+  <br>
+  <img src="long_text.png" alt="AVARICE LIQUIDITY" width="200px">
+</div>
+
+<!--Login form for account info; values are stored as localStorage keys-->
+<div id="loginForm" class="center"> 
+<form action="index.html" method="get" name="loginSignup" id="loginSignup" onsubmit="submitHandler()">
+<p>Username:</p>
+  <input type="text" id="username"><br>
+<p>Password:</p>
+  <input type="text" id="password">
+
+<p>I agree to the Terms and Conditions applicable to my account. </p>
+  <input type="checkbox" id="userExists" style="visibility: shown;">
+
+  <br>
+  <a href="index.html">
+  <input type="submit" class="submitButton" value="Login or Sign Up">
+  </a>
+  <br>
+</form>
+</div>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+</body>
+</html>
+  
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--THIS WEBSITE WAS CREATED BY JAMES GENGERKE; EXCLUDING OTHER SOURCES THAT ARE NOTED-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Avarice</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type = "text/javascript" src="script.js"></script>
+  <script>
+    //Prevent Access if Username is Null
+    if (localStorage.getItem('storeUsername') === "null") {
+    window.location.href = "login.html";
+    logout();
+    } else {
+    void 0; 
+    }
+
+    //If there are no localstorage keys then go to login; if there are no keys then there can't have been a login
+    if (localStorage.length === 0) {
+    window.location.href = "login.html";}
+  </script>
+</head>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<body>
+<!--Nav Bar-->
+<div class="topnav">
+  <img id="mainText" src="short_text.png" alt="AVARICE" width="200px">
+  <a href="index.html">Accounts</a>
+  <a href="transfer.html">Transfer In</a>
+  <a href="investments.html">Investments</a>
+  <a href="stocks.html">Markets</a>
+  <a href="newsletter.html">News</a>
+  <a href="login.html" style="float: right;" onclick="logout()">Logout</a>
+</div>  
+<h1 class="headerText">
+  Accounts
+</h1>
+
+<!--From: https://www.vecteezy.com/vector-art/36418800-financial-growth-illustration-for-the-financial-industry-piggy-bank-coins-growth-arrow-and-leaves-vector-graphic-->
+<img class="fillerImg" src="https://static.vecteezy.com/system/resources/previews/036/418/800/non_2x/financial-growth-illustration-for-the-financial-industry-piggy-bank-coins-growth-arrow-and-leaves-graphic-vector.jpg" alt="piggyBank">
+
+<!--Prints account details by reteriving localStorage values by their key-->
+<h2 class="headerText">
+  Welcome, 
+  <script> document.write(localStorage.getItem("storeUsername"));</script>  
+</h2>
+
+<h2 class="headerText" id="mainAcctInfo">$
+  <script>document.write(localStorage.getItem("totalFunds"));</script>
+</h2>
+
+<p id="acctInfoDisplay">
+  Account Number: 
+  <script> document.write(localStorage.getItem("acctNum"));</script>  
+  <br>Routing Number: 740111837 <br>
+  <i>This account is not currently eligible for user choosen Trades or Options. </i>
+</p>
+
+<div style="margin-left: 5%;">
+<h3>FAQ's</h3>
+<ol>
+<script>
+  //use a while loop to render the numbered FAQ list
+  //this is inefficient but satisfies the loop requirment
+var active = true;
+  while(active === true) {
+  document.write("<li>" + "How can I transfer Funds into my account?" + "<br> You can go to the transfers page and follow the instructions there to add funds to your account." + "</li><br>");
+  document.write("<li>" + "Are there any fees on my account?" + "<br>No, there are no fees on any of our offered accounts." + "</li><br>");
+  document.write("<li>" + "Is my personal data secure?" + "<br>Yes we use industry standard security methods to keep you safe." + "</li><br>");
+  active = false; 
+  } 
+</script>
+</ol></div>
+
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+</body>
+</html>
+

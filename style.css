@@ -1,0 +1,314 @@
+/*Main Font for the site*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+This CSS was Written by James Gengerke
+*/
+
+/*Main Body / general headings*/
+body {
+  margin:0;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:500;
+  letter-spacing: 2px;
+  font-size:50px;
+  color: #000000;
+}
+h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:500;
+  letter-spacing: 2px;
+  font-size:35px;
+  color: #000000;
+}
+p {
+  font-family: 'Noto Sans', sans-serif;
+  letter-spacing: 1px;
+  font-size:13px;
+  color: #000000;
+  pointer-events: none;
+  font-weight: 300;
+  padding-left: 5%;
+}
+
+/*Nav Bar*/
+.topnav {
+  overflow: hidden;
+  background-color: #59c7de;
+  font-weight: bold;
+  padding: 1%;
+}
+
+#mainText{
+  margin-right: 10px;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;  
+  transition: 0.75s ease-out;
+  margin-top: 10px;
+}
+
+.topnav a:hover {
+  border-radius: 30px;
+  background-color: #153f57;
+  cursor: pointer;
+}
+
+.topnav a.active {
+  /*
+  background-color: #4138ff;
+  */
+  color: white;
+}
+
+.topnav a:visited {
+  color: #FFFFFF;
+}
+
+.topnav a:link {
+  color: #FFFFFF;
+}
+
+a{
+  text-decoration: none;
+}
+
+button {
+  background: #4138ff;
+  border-radius: 1000px;
+  box-shadow: #4138ff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: 0.75s ease-out;
+}
+button:hover {
+  background: #000000;
+  box-shadow: #000000 0 10px 20px -10px;
+  cursor: pointer;
+}
+
+.headerText{
+  margin-left: 5%;
+}
+
+/*Centers what its applied to*/
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+}
+
+/*Applied to submit buttons that are not regular buttons*/
+.submitButton{
+  background: #4138ff;
+  border-radius: 1000px;
+  box-shadow: #4138ff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: 0.75s ease-out;
+}
+.submitButton:hover {
+  background: #000000;
+  box-shadow: #000000 0 10px 20px -10px;
+  cursor: pointer;
+}
+
+/*Refers to inputs that the user needs to address*/
+input {
+font-size: 30px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+max-width: fit-content;
+}
+
+input[type=checkbox] {
+  transform: scale(3.0);
+}
+
+/*Transfers page basic styles*/
+#transferContents {
+margin-left: 5%;
+font-size: 20px;
+}
+
+.transferSelect {
+  font-size: 30px;
+  width: 500px;
+}
+
+#startTransfer {
+  margin-top: 3%;
+}
+
+#acctInfoDisplay {
+  font-size: 15px;
+}
+
+/*Markets page basic styles*/
+#marketsDisplay {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  margin: 20%;
+}
+
+/*News Page basic styles*/
+#newsletterDisplay {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgFadeInOut {
+  width: 500px;
+}
+
+#trackedTd {
+  margin: 5%;
+  width: 500px;
+}
+
+#newsWidget {
+  width: 98%;
+  height: 1000px;
+  margin-top: 20px;
+}
+
+/*News Image specific CSS*/
+#imgFadeInOut1 {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 20%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#imgFadeInOut1.fade {
+  opacity: 1;
+}
+#imgFadeInOut1.fadeOut {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#imgFadeInOut2 {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 20%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#imgFadeInOut2.fade {
+  opacity: 1;
+}
+#imgFadeInOut2.fadeOut {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#imgFadeInOut3 {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 20%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#imgFadeInOut3.fade {
+  opacity: 1;
+}
+#imgFadeInOut3.fadeOut {
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#imgFadeInOut4 {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 20%;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#imgFadeInOut4.fade {
+  opacity: 1;
+}
+#imgFadeInOut4.fadeOut {
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/*Investments page basic styles for relevant items*/
+#investButton {
+  margin-bottom: 5%;
+}
+
+.createdSpan {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Filler image style*/
+.fillerImg {
+  width: 500px;
+  float: right;
+  margin-right: 150px;
+}
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--THIS WEBSITE WAS CREATED BY JAMES GENGERKE; EXCLUDING OTHER SOURCES THAT ARE NOTED-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Investments</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type = "text/javascript" src="script.js"></script>
+  <script>
+    //Prevent Access if Username is Null
+    if (localStorage.getItem('storeUsername') === "null") {
+    window.location.href = "login.html";
+    logout();
+    } else {
+    void 0; 
+    }
+  </script>
+</head>
+<!--––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-->
+<body>
+<!--Nav Bar-->
+<div class="topnav">
+  <img id="mainText" src="short_text.png" alt="AVARICE" width="200px">
+  <a href="index.html">Accounts</a>
+  <a href="transfer.html">Transfer In</a>
+  <a href="investments.html">Investments</a>
+  <a href="stocks.html">Markets</a>
+  <a href="newsletter.html">News</a>
+  <a href="login.html" style="float: right;" onclick="logout()">Logout</a>
+</div>  
+
+<!--Title with scrolling ticker information-->
+<h1 class="headerText">Investments</h1>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500 Index"
+      },
+      {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100 Cash CFD"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "description": "Gold",
+        "proName": "TVC:GOLD"
+      },
+      {
+        "description": "USD to Yen",
+        "proName": "FX:USDJPY"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": true,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+<!--Picks 4 random tips form an array and displays them in an unordered list-->
+<div style="margin-left: 5%; float: left; margin-right: 5%;">
+    <h2>Investing General Tips</h2>
+    <ul>
+    <script>
+        //Loop that randomly picks a number based on the index of an array
+        //with tips and then prints them out in an un ordered list. 
+        var tipArray = ["Use your personal knowledge on the investment","Look for patterns and trends","Do the math on risk vs reward","Commit fully to your goals and choices","Buy the right investment","Create a diversified portfolio","Dont overthink it all, its just money"]
+    for (t=0;t<4;t++) {
+        var ranTipIndex = Math.floor(Math.random()*7);
+        document.write("<li>" + tipArray[ranTipIndex] + "</li><br>");
+      }
+    </script>
+    </ul>
+</div>
+
+<!--Remove money by "investing" (More information in the script file)-->
+<div style="margin-left: 5%; margin-right: 5%;" id="investedMoney">
+    <br>
+    <h3>
+        While your account is not authorized for user choosen trades, you are entitled 
+        to broker recommended trades sent on your behalf by our professionals at Avarice. 
+    </h3>
+<button onclick="invest()" id="investButton" class="center">
+    Click Here to authorize Avarice to invest your money. 
+</button>
+
+</div>
+
+<!--TradingView Credit-->
+<br><br><br><br><br><br><br><br><br><br>
+<hr>
+<a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+    <p style="font-size: 15px; background-color: lightblue;"><b>All prices and data here are sourced from TradingView.</b></p>
+    </a>
+
+</body>
+
